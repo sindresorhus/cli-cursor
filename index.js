@@ -1,6 +1,8 @@
 'use strict';
-
+var restoreCursor = require('restore-cursor');
 var hidden = false;
+
+restoreCursor();
 
 exports.show = function () {
 	hidden = false;
