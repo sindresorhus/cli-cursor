@@ -7,7 +7,7 @@ The cursor is [gracefully restored](https://github.com/sindresorhus/restore-curs
 
 ## Install
 
-```sh
+```
 $ npm install --save cli-cursor
 ```
 
@@ -15,11 +15,11 @@ $ npm install --save cli-cursor
 ## Usage
 
 ```js
-var cliCursor = require('cli-cursor');
+const cliCursor = require('cli-cursor');
 
 cliCursor.hide();
 
-var unicornsAreAwesome = true;
+const unicornsAreAwesome = true;
 cliCursor.toggle(unicornsAreAwesome);
 ```
 
