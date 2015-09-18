@@ -1,4 +1,5 @@
 'use strict';
+var childProcess = require('child_process');
 var test = require('ava');
 var cliCursor = require('./');
 var write = process.stdout.write;
@@ -56,4 +57,12 @@ test('toggle force 3', function (t) {
 	cliCursor.show();
 	t.plan(1);
 	t.assert(getStdout(cliCursor.toggle.bind(null, false)) === HIDE);
+});
+
+// Used to fail, see sindresorhus/log-update#2.
+test('require', function (t) {
+	t.plan(1);
+	t.assert(childProcess.execSync('node index.js', {
+		encoding: 'utf8'
+	}) === '');
 });
