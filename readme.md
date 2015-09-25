@@ -32,7 +32,7 @@ cliCursor.toggle(unicornsAreAwesome);
 
 ### .toggle(force)
 
-`force` is useful to show or hide the cursor based an a boolean.
+`force` is useful to show or hide the cursor based on a boolean.
 
 
 ## License
