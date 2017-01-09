@@ -6,6 +6,8 @@ const write = process.stderr.write;
 const SHOW = '\u001b[?25h';
 const HIDE = '\u001b[?25l';
 
+process.stderr.isTTY = true;
+
 function getStderr(fn) {
 	let ret = '';
 

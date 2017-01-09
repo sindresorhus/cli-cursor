@@ -4,14 +4,26 @@ const restoreCursor = require('restore-cursor');
 let hidden = false;
 
 exports.show = stream => {
+	const s = stream || process.stderr;
+
+	if (!s.isTTY) {
+		return;
+	}
+
 	hidden = false;
-	(stream || process.stderr).write('\u001b[?25h');
+	s.write('\u001b[?25h');
 };
 
 exports.hide = stream => {
+	const s = stream || process.stderr;
+
+	if (!s.isTTY) {
+		return;
+	}
+
 	restoreCursor();
 	hidden = true;
-	(stream || process.stderr).write('\u001b[?25l');
+	s.write('\u001b[?25l');
 };
 
 exports.toggle = (force, stream) => {
