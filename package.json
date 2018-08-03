@@ -16,7 +16,8 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "types/index.d.ts"
   ],
   "keywords": [
     "cli",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "ava": "*",
+    "typescript": "^3.0.1",
     "xo": "*"
   },
   "xo": {
