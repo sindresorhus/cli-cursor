@@ -1,24 +1,24 @@
 import childProcess from 'child_process';
 import test from 'ava';
-import cliCursor from './';
+import cliCursor from '.';
 
-const write = process.stderr.write;
-const SHOW = '\u001b[?25h';
-const HIDE = '\u001b[?25l';
+const {stderr: {write}} = process;
+const SHOW = '\u001B[?25h';
+const HIDE = '\u001B[?25l';
 
 process.stderr.isTTY = true;
 
 function getStderr(fn) {
-	let ret = '';
+	let result = '';
 
 	process.stderr.setEncoding('utf8');
-	process.stderr.write = str => {
-		ret += str;
+	process.stderr.write = string => {
+		result += string;
 	};
 
 	fn();
 	process.stderr.write = write;
-	return ret;
+	return result;
 }
 
 test('show', t => {
@@ -54,7 +54,7 @@ test('toggle force 3', t => {
 	t.is(getStderr(cliCursor.toggle.bind(null, false)), HIDE);
 });
 
-// used to fail, see sindresorhus/log-update#2
+// Used to fail, see sindresorhus/log-update#2
 test('require', t => {
 	t.is(childProcess.execSync('node index.js', {encoding: 'utf8'}), '');
 });

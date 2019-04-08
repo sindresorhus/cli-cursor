@@ -8,7 +8,7 @@ The cursor is [gracefully restored](https://github.com/sindresorhus/restore-curs
 ## Install
 
 ```
-$ npm install --save cli-cursor
+$ npm install cli-cursor
 ```
 
 
@@ -30,13 +30,15 @@ cliCursor.toggle(unicornsAreAwesome);
 
 ### .hide([stream])
 
-### .toggle(force, [stream])
+### .toggle([force], [stream])
 
-`force` is useful to show or hide the cursor based on a boolean.
+#### force
+
+Is useful to show or hide the cursor based on a boolean.
 
 #### stream
 
-Type: `Stream`<br>
+Type: `WritableStream`<br>
 Default: `process.stderr`
 
 
