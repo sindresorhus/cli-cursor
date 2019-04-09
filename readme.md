@@ -38,7 +38,7 @@ Is useful to show or hide the cursor based on a boolean.
 
 #### stream
 
-Type: `WritableStream`<br>
+Type: `stream.Writable`<br>
 Default: `process.stderr`
 
 
