@@ -26,15 +26,15 @@ cliCursor.toggle(unicornsAreAwesome);
 
 ## API
 
-### .show([stream])
+### .show(stream?)
 
-### .hide([stream])
+### .hide(stream?)
 
-### .toggle([force], [stream])
+### .toggle(force?, stream?)
 
 #### force
 
-Is useful to show or hide the cursor based on a boolean.
+Useful for showing or hiding the cursor based on a boolean.
 
 #### stream
 
