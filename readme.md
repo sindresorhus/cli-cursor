@@ -1,4 +1,4 @@
-# cli-cursor [![Build Status](https://travis-ci.org/sindresorhus/cli-cursor.svg?branch=master)](https://travis-ci.org/sindresorhus/cli-cursor)
+# cli-cursor
 
 > Toggle the CLI cursor
 
