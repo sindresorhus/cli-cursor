@@ -1,6 +1,7 @@
-import childProcess from 'child_process';
+import process from 'node:process';
+import childProcess from 'node:child_process';
 import test from 'ava';
-import cliCursor from '.';
+import cliCursor from './index.js';
 
 const {stderr: {write}} = process;
 const SHOW = '\u001B[?25h';

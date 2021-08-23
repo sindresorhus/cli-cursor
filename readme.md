@@ -4,25 +4,22 @@
 
 The cursor is [gracefully restored](https://github.com/sindresorhus/restore-cursor) if the process exits.
 
-
 ## Install
 
 ```
 $ npm install cli-cursor
 ```
 
-
 ## Usage
 
 ```js
-const cliCursor = require('cli-cursor');
+import cliCursor from 'cli-cursor';
 
 cliCursor.hide();
 
 const unicornsAreAwesome = true;
 cliCursor.toggle(unicornsAreAwesome);
 ```
-
 
 ## API
 
@@ -38,9 +35,8 @@ Useful for showing or hiding the cursor based on a boolean.
 
 #### stream
 
-Type: `stream.Writable`<br>
+Type: `stream.Writable`\
 Default: `process.stderr`
-
 
 ---
 
