@@ -1,6 +1,6 @@
 {
 	"name": "cli-cursor",
-	"version": "4.0.0",
+	"version": "5.0.0",
 	"description": "Toggle the CLI cursor",
 	"license": "MIT",
 	"repository": "sindresorhus/cli-cursor",
