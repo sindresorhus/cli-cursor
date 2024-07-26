@@ -9,7 +9,7 @@ const HIDE = '\u001B[?25l';
 
 process.stderr.isTTY = true;
 
-function getStderr(fn) {
+function getStderr(function_) {
 	let result = '';
 
 	process.stderr.setEncoding('utf8');
@@ -17,7 +17,7 @@ function getStderr(fn) {
 		result += string;
 	};
 
-	fn();
+	function_();
 	process.stderr.write = write;
 	return result;
 }
