@@ -52,5 +52,9 @@
 	},
 	"ava": {
 		"workerThreads": false
+	},
+	"homepage": "https://github.com/sindresorhus/cli-cursor",
+	"bugs": {
+		"url": "https://github.com/sindresorhus/cli-cursor/issues"
 	}
 }
